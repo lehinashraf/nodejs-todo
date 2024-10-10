@@ -4,7 +4,7 @@
 
 This is a basic Node.js application that allows you to manage tasks on a single page. You can add new tasks, mark them as complete, and the app organizes them into two categories: new tasks and completed tasks. The project utilizes the following technologies: - *EJS (Embedded JavaScript):* A templating engine used to generate dynamic HTML markup based on data passed from the server. - *Body-parser:* Middleware that helps handle incoming request bodies, particularly useful for extracting data from form submissions.
 
-![To-Do List Screenshot]()
+![To-Do List Screenshot](https://github.com/lehinashraf/nodejs-todo/blob/main/public/tododemo.png)
 
 ## Getting Started
 
