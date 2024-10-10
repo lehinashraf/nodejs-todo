@@ -1,0 +1,60 @@
+<html>
+<head> 
+<title> ToDo App </title>
+ <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+ <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container gradient-background">
+        <h1>ToDo List App</h1>
+
+        <form action="/addtask" method="POST" onsubmit="return validateTask()">
+            <input type="text" name="newtask" id="newtask" placeholder="Add a new task" aria-label="New Task">
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div class="tasks-section">
+            <h2>Tasks</h2>
+            <ul>
+                <% for (var i = 0; i < task.length; i++) { %>
+                    <li>
+                        <input type="checkbox" name="check" value="<%= task[i] %>">
+                        <label><%= task[i] %></label>
+                    </li>
+                <% } %>
+            </ul>
+
+            <button formaction="/removetask" type="submit" id="remove">Remove Completed</button>
+        </div>
+
+        <div class="tasks-section">
+            <h2>Completed Tasks</h2>
+            <ul>
+                <% for (var i = 0; i < complete.length; i++) { %>
+                    <li>
+                        <input type="checkbox" checked disabled>
+                        <label><%= complete[i] %></label>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function validateTask() {
+            const taskInput = document.getElementById('newtask');
+            if (taskInput.value.trim() === '') {
+                alert('Please enter a task.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>

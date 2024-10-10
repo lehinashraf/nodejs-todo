@@ -1,0 +1,105 @@
+body {
+    font-family: 'Afacad Flux', sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./bg1.webp');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+.gradient-background {
+    background: linear-gradient(300deg, #001f3f, #4B0082, #FF4136);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    opacity: 0.9;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.container {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    color:white;
+}
+h1{
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: #EEE;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #222;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+button#remove {
+    background-color: #dc3545;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.tasks-section {
+    margin-top: 20px;
+}
